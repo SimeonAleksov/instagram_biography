@@ -15,9 +15,9 @@ User file should look like this:
 
 Create a virtual env and install the requirements
 ```shell script
-$ python -m venv venv`
+$ python -m venv venv
 # Linux activation
-$ source venv/bin/activate`
+$ source venv/bin/activate
 # Windows activation
 $ venv/Scripts/activate.bat
 # And install requirements
