@@ -17,10 +17,6 @@ def run_bot(url, user_file, headers, *args, **kwargs):
     headers['Cookie'] = cookie
     for user in list(map(int, open(user_file).readlines())):
         response = requests.get(url.format(user_id=user), headers=headers)
-        for arg in args:
-            users_dict = {
-                arg: response.json().get('user').get(arg)
-            }
         users_dict = {
             'username': response.json().get('user').get('username'),
             'biography': response.json().get('user').get('biography'),
